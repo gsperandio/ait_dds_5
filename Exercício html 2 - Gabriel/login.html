@@ -1,31 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(222, 226, 228);
+        }
+
+        .div1 {
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(61, 179, 169);
+            border-radius: 5px;
+            background-color: rgb(252, 252, 252);
+            margin-top: 300px;
+            height: 400px;
+            width: 500px;
+            text-align: center;
+
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: rgb(31, 133, 124);
+        }
+
+        hr {
+            border:none;
+            height: 1px;;
+            color: rgb(61, 179, 169);
+            background: linear-gradient(to right, rgba(0, 0 , 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)100%);
+        }
+
+        .div2 {
+            margin-top: 29px;
+            background-color: rgba(131, 189, 184, 0.404);
+            height: 17%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #btn_Login {
+            color: white;
+            background-color: rgb(31, 133, 124);
+            border: solid;
+            border-radius: 5px;
+            border-width: 1px;
+            margin-top: 30px;
+            width: 450px;
+            height: 35px;
+        }
+
+        #btn_cadastro {
+            color: rgb(31, 133, 124);
+            background-color: white;
+            border: solid;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: left;
+            padding: 0;
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+
+        #boxes {
+            width: 440px;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+
+        #label1 {
+            margin-right: 380px;
+            color: rgb(31, 133, 124);
+        }
+
+        #label2 {
+            margin-right: 0;
+            color: rgb(31, 133, 124);
+        }
+
+        .manterbox {
+            margin-right: 310px;
+            margin-top: 12px;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
+    <div class="div1">
         <h1>Login</h1>
         <hr>
         <form action="">
-            <label for="">Seu e-mail</label>
-            <i><input placeholder="contato@htmlecsspro.com" type="text"></i>
-            <br>
-            <label for="">Sua senha</label>
-            <input placeholder="1234" type="password">
-            <br>
-            <input type="checkbox" id="manter" name="manter" value="">
-            <label for="manter">Manter-me logado</label><br>
-            <input type="submit" value="Logar">
+            <div class="campos">
+                <label id="label1" for="">Seu e-mail</label>
+                <br>
+                <i><input id="boxes" placeholder="contato@htmlecsspro.com" type="text"></i>
+                <br>
+                <label id="label1" for="">Sua senha</label>
+                <br>
+                <input id="boxes" placeholder="1234" type="password">
+            </div>
+            
+            <div class="manterbox">
+                <input id="label2" type="checkbox" id="manter" name="manter" value="">
+                <label for="manter">Manter-me logado</label><br>
+            </div>
+            <input id="btn_Login" type="submit" value="Logar">
         </form>
-        <div>
-            <p>Ainda não tem conta?</p>
+        <div class="div2">
+            <p> <span style="opacity: 50%;">Ainda não tem conta?</span></p>
             <form action="">
-                <input type="button" onclick="alert('Fazer cadastro')" value="Cadastre-se">
+                <input id="btn_cadastro" type="button" onclick="alert('Fazer cadastro')" value="Cadastre-se">
             </form>
         </div>
     </div>
 </body>
+
 </html>
